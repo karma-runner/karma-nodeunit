@@ -25,6 +25,8 @@
     "grunt": "0.4.x",
     "grunt-contrib-jshint": "0.1.x",
     "testacular": "*",
+    "expect.js": "*",
+    "sinon": "*",
     "gruntacular": "0.1.x"
   },
   "license": "MIT"
