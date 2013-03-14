@@ -1,0 +1,31 @@
+{
+  "name": "testacular-nodeunit",
+  "version": "0.0.1",
+  "description": "A Testacular plugin - adapter for Nodeunit testing framework.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hurrymaplelad/testacular-nodeunit.git"
+  },
+  "bugs": {
+    "url": "http://github.com/hurrymaplelad/testacular-nodeunit/issues"
+  },
+  "keywords": [
+    "testacular-plugin",
+    "adapter",
+    "nodeunit"
+  ],
+  "author": "Adam Hull <adam@hmlad.com>",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-jshint": "0.1.x",
+    "testacular": "*",
+    "gruntacular": "0.1.x"
+  },
+  "license": "MIT"
+}
