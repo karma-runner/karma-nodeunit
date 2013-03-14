@@ -1,7 +1,7 @@
 {
   "name": "testacular-nodeunit",
   "version": "0.0.1",
-  "description": "A Testacular plugin - adapter for Nodeunit testing framework.",
+  "description": "A Testacular plugin - adapter for the Nodeunit testing framework.",
   "main": "lib/index.js",
   "scripts": {
     "test": "grunt test"
