@@ -3,7 +3,7 @@
  These tests are executed in browser.
  */
 describe('nodeunit adapter ', function() {
-  var Testacular = window.__testacular__.constructor;
+  var Karma = window.__karma__.constructor;
 
   describe('running a suite of tests', function() {
     var runner, tc, reporter;
@@ -17,7 +17,7 @@ describe('nodeunit adapter ', function() {
 
     beforeEach(function() {
       runner = window.nodeunit;
-      tc = new Testacular(new MockSocket(), {});
+      tc = new Karma(new MockSocket(), {});
       reporter = new (createStartFn(tc))();
     });
 

@@ -1,20 +1,20 @@
 {
-  "name": "testacular-nodeunit",
+  "name": "karma-nodeunit",
   "version": "0.0.1",
-  "description": "A Testacular plugin - adapter for the Nodeunit testing framework.",
-  "main": "lib/index.js",
+  "description": "A Karma plugin. Adapter for the Nodeunit testing framework.",
+  "main": "lib/adapter.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hurrymaplelad/testacular-nodeunit.git"
+    "url": "git://github.com/hurrymaplelad/karma-nodeunit.git"
   },
   "bugs": {
-    "url": "http://github.com/hurrymaplelad/testacular-nodeunit/issues"
+    "url": "http://github.com/hurrymaplelad/karma-nodeunit/issues"
   },
   "keywords": [
-    "testacular-plugin",
+    "karma-plugin",
     "adapter",
     "nodeunit"
   ],
@@ -24,10 +24,9 @@
   "devDependencies": {
     "grunt": "0.4.x",
     "grunt-contrib-jshint": "0.1.x",
-    "testacular": "*",
+    "grunt-karma": "*",
     "expect.js": "*",
-    "sinon": "*",
-    "gruntacular": "0.1.x"
+    "sinon": "*"
   },
   "license": "MIT"
 }
