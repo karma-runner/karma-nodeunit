@@ -4,9 +4,17 @@ var formatFailedAssertion = function(assertion) {
 };
 
 var createStartFn = function(tc, passedInRunner) {
+  var nodeunit = window.nodeunit,
+      deferredModules;
+  
+  // Intercept nodeunit.run in case its called before Karma has started
+  nodeunit.run = function(modules) {
+    deferredModules = modules;
+  };
+
   return function () {
     var totalNumberOfTest = 0;
-    var runner = passedInRunner || window.nodeunit;
+    var runner = passedInRunner || nodeunit;
 
     runner.run = function(modules) {
       runner.runModules(modules, {
@@ -41,6 +49,11 @@ var createStartFn = function(tc, passedInRunner) {
         }
       });
     };
+
+    // Run any suites that were waiting for Karma to start
+    if(deferredModules) {
+      runner.run(deferredModules);
+    }
   };
 };
 
