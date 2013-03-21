@@ -8,8 +8,14 @@ var fixtureSuite = {
 
   failing: {
     "This is only a test": function(test) {
-      test.ok('everything');
       test.equal('this', 'real'); // will fail
+      test.done();
+    }
+  },
+
+  throwing: {
+    "Panic!": function(test) {
+      throw new Error("thrown from a test");
       test.done();
     }
   }

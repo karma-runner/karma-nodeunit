@@ -43,8 +43,23 @@ describe('nodeunit adapter ', function() {
     it('should report test failures', function(done) {
       sinon.stub(tc, 'result', function(result) {
         expect(result.success).to.be(false);
+        expect(result.description).to.equal("This is only a test");
+        expect(result.log.length).to.be(1);
+        expect(result.log[0]).to.contain('AssertionError: "real" == "this"');
       });
       runSuite(fixtureSuite.failing, function() {
+        done();
+      });
+    });
+
+    it('should fail tests that throw', function(done) {
+      sinon.stub(tc, 'result', function(result) {
+        expect(result.success).to.be(false);
+        expect(result.description).to.equal("Panic!");
+        expect(result.log.length).to.be(1);
+        expect(result.log[0]).to.contain('thrown from a test');
+      });
+      runSuite(fixtureSuite.throwing, function() {
         done();
       });
     });
