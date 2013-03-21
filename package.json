@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hurrymaplelad/karma-nodeunit.git"
+    "url": "git://github.com/karma-runner/karma-nodeunit.git"
   },
   "bugs": {
-    "url": "http://github.com/hurrymaplelad/karma-nodeunit/issues"
+    "url": "http://github.com/karma-runner/karma-nodeunit/issues"
   },
   "keywords": [
     "karma-plugin",
