@@ -3,6 +3,8 @@ Adapter for the Nodeunit testing framework.  For more information on Karma see t
 
 Currently supports Karma 0.8.x
 
+[![Build Status](https://travis-ci.org/karma-runner/karma-nodeunit.png)](https://travis-ci.org/karma-runner/karma-nodeunit)
+
 ## Usage
 1. `npm install karma-nodeunit` or add it to your `package.json`.
 2. Include nodeunit and the karma adapter in your `karma.conf.js`:
