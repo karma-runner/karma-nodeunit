@@ -15,7 +15,7 @@
   },
   "keywords": [
     "karma-plugin",
-    "adapter",
+    "karma-adapter",
     "nodeunit"
   ],
   "author": "Adam Hull <adam@hmlad.com>",
