@@ -21,6 +21,9 @@
   "author": "Adam Hull <adam@hmlad.com>",
   "dependencies": {
   },
+  "peerDependencies": {
+    "karma": ">=0.9"
+  },
   "devDependencies": {
     "grunt": "0.4.x",
     "grunt-contrib-jshint": "0.1.x",
