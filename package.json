@@ -1,6 +1,6 @@
 {
   "name": "karma-nodeunit",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A Karma plugin. Adapter for the Nodeunit testing framework.",
   "main": "lib/index.js",
   "scripts": {
@@ -19,17 +19,18 @@
     "nodeunit"
   ],
   "author": "Adam Hull <adam@hmlad.com>",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
-    "karma": ">=0.9"
+    "karma": ">=0.10"
   },
   "devDependencies": {
-    "grunt": "0.4.x",
-    "grunt-contrib-jshint": "0.1.x",
-    "grunt-karma": "*",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.0",
+    "grunt-karma": "~0.6.0",
     "expect.js": "*",
-    "sinon": "*"
+    "sinon": "~1.7.3",
+    "mocha": "~1.13.0",
+    "karma-mocha": "~0.1.0"
   },
   "license": "MIT"
 }
