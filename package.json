@@ -25,11 +25,11 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-jshint": "~0.7.x",
     "grunt-karma": "~0.6.0",
     "expect.js": "*",
-    "sinon": "~1.7.3",
-    "mocha": "~1.13.0",
+    "sinon": "1.x",
+    "mocha": "1.x",
     "karma-mocha": "~0.1.0"
   },
   "license": "MIT"

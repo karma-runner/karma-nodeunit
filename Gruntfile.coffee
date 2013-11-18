@@ -3,7 +3,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkgFile: 'package.json'
 
-    build: 
+    build:
       adapter: files
 
     # JSHint options
@@ -14,7 +14,6 @@ module.exports = (grunt) ->
           src: files
         options:
           browser: true,
-          es5: true,
           strict: false
           undef: false
           camelcase: false
@@ -46,6 +45,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-karma'
 
-  grunt.registerTask 'default', ['build', 'jshint', 'test']
-  grunt.registerTask 'test', ['karma']
+  grunt.registerTask 'default', ['build', 'test']
+  grunt.registerTask 'test', ['jshint', 'karma']
 
