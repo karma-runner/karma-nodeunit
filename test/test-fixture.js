@@ -1,7 +1,19 @@
+var obj = {
+  val: 'foo'
+};
+
 var fixtureSuite = {
   passing: {
+    setUp: function(cb) {
+      obj.val = 'bar';
+      cb();
+    },
+    tearDown: function(cb) {
+      obj.val = 'foo';
+      cb();
+    },
     "Ceci nes't pas une test": function(test) {
-        test.notStrictEqual(this, 'une test');
+        test.equal(obj.val, 'bar');
         test.done();
     },
   },
