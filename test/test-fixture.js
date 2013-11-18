@@ -32,3 +32,6 @@ var fixtureSuite = {
     }
   }
 };
+
+if(typeof exports !== 'undefined') exports.fixtureSuite = fixtureSuite;
+if(window.__run) nodeunit.run(fixtureSuite);
