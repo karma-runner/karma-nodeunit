@@ -22,7 +22,7 @@ describe('nodeunit adapter ', function() {
     });
 
     it('should report suite completion', function(done) {
-      runSuite(fixtureSuite, function() {
+      runSuite(completionSuite, function() {
         expect(tc.complete.called).to.be(true);
         done();
       });
@@ -60,6 +60,17 @@ describe('nodeunit adapter ', function() {
         expect(result.log[0]).to.contain('thrown from a test');
       });
       runSuite(fixtureSuite.throwing, function() {
+        done();
+      });
+    });
+
+    it('should setUp and tearDown', function(done) {
+      sinon.stub(tc, 'result', function(result) {
+        expect(result.description).to.be("Was setUp");
+        expect(result.suite).to.be.an('array');
+        expect(result.success).to.be(true);
+      });
+      runSuite(fixtureSuite['setUp and tearDown'], function() {
         done();
       });
     });
