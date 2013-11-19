@@ -1,12 +1,14 @@
 var formatFailedAssertion = function(assertion) {
+  var stack = assertion.error.stack;
   return (assertion.message || assertion.method || 'no message') +
-    '\n' + (assertion.error.stack || assertion.error);
+    '\n' + (assertion.error) +
+    (stack ? ('\n' + stack) : '');
 };
 
 var createStartFn = function(tc, passedInRunner) {
   var nodeunit = window.nodeunit,
       deferredModules;
-  
+
   // Intercept nodeunit.run in case its called before Karma has started
   nodeunit.run = function(modules) {
     deferredModules = modules;

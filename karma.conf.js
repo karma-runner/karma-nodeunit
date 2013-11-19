@@ -10,6 +10,6 @@ module.exports = function (config) {
       'test/*.js'
     ],
     autoWatch: true,
-    browsers: process.env.TRAVIS ? ['Firefox'] : ['PhantomJS']
+    browsers: process.env.TRAVIS ? ['Firefox'] : ['Firefox', 'Chrome']
   });
 };
