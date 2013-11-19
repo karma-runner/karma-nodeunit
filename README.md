@@ -36,7 +36,7 @@ nodeunit.run({
 ```
 
 ## Release history
-
+* 2013-11-18    v0.1.1    Fix #8, #9, and #10. Bump nodeunit to v0.8.2.
 * 2013-10-11    v0.1.0    Migration to karma 0.10.x. Travis CI.
 * 2013-03-21    v0.0.3    Linked to official karma plugins
 * 2013-03-21    v0.0.2    Usage examples, renamed from https://github.com/testacular/testacular-jasmine
