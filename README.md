@@ -11,7 +11,7 @@ Currently supports Karma 0.10.x
 2. Include nodeunit and the karma adapter in your `karma.conf.js`:
 
 ```js
-frameworks = ['nodeunit']
+frameworks = ['nodeunit'];
 
 files = [
   'lib/*.js' // files to test
