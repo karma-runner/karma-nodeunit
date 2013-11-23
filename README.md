@@ -11,10 +11,11 @@ Currently supports Karma 0.10.x
 2. Include nodeunit and the karma adapter in your `karma.conf.js`:
 
 ```js
+frameworks = ['nodeunit']
+
 files = [
-  'node_modules/karma-nodeunit/lib/nodeunit.js',
-  'node_modules/karma-nodeunit/lib/adapter.js',
-  'test/*.js'
+  'lib/*.js' // files to test
+  'test/*.js' // test files
 ];
 browsers = ['Chrome'];
 ```
