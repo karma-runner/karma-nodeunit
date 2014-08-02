@@ -17,7 +17,8 @@ describe('nodeunit adapter ', function() {
 
     beforeEach(function() {
       runner = window.nodeunit;
-      tc = new Karma(new MockSocket(), {});
+      tc = new Karma(new MockSocket(), {}, window.open,
+          window.navigator, window.location);
       reporter = new (createStartFn(tc))();
     });
 
