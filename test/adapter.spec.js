@@ -6,7 +6,7 @@ describe('nodeunit adapter ', function() {
   var Karma = window.__karma__.constructor;
 
   describe('running a suite of tests', function() {
-    var runner, tc, reporter;
+    var runner, tc, reporter, info = {};
 
     var runSuite = function (suite, done) {
       runner.run([suite]);
@@ -20,11 +20,16 @@ describe('nodeunit adapter ', function() {
       tc = new Karma(new MockSocket(), {}, window.open,
           window.navigator, window.location);
       reporter = new (createStartFn(tc))();
+
+      sinon.stub(tc, 'info', function(newInfo) {
+        info = newInfo;
+      });
     });
 
     it('should report suite completion', function(done) {
       runSuite(completionSuite, function() {
         expect(tc.complete.called).to.be(true);
+        expect(info.total).to.be(2);
         done();
       });
     });
@@ -37,6 +42,7 @@ describe('nodeunit adapter ', function() {
         expect(result.log).to.be.an('array');
       });
       runSuite(fixtureSuite.passing, function() {
+        expect(info.total).to.be(1);
         done();
       });
     });
@@ -49,6 +55,7 @@ describe('nodeunit adapter ', function() {
         expect(result.log[0]).to.contain('AssertionError: "real" == "this"');
       });
       runSuite(fixtureSuite.failing, function() {
+        expect(info.total).to.be(1);
         done();
       });
     });
@@ -61,6 +68,7 @@ describe('nodeunit adapter ', function() {
         expect(result.log[0]).to.contain('thrown from a test');
       });
       runSuite(fixtureSuite.throwing, function() {
+        expect(info.total).to.be(1);
         done();
       });
     });
@@ -72,6 +80,7 @@ describe('nodeunit adapter ', function() {
         expect(result.success).to.be(true);
       });
       runSuite(fixtureSuite['setUp and tearDown'], function() {
+        expect(info.total).to.be(1);
         done();
       });
     });
