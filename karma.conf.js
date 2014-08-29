@@ -3,7 +3,7 @@ module.exports = function (config) {
     basePath: '.',
     frameworks: ['mocha'],
     files: [
-      'node_modules/expect.js/expect.js',
+      'node_modules/expect.js/index.js',
       'node_modules/sinon/pkg/sinon.js',
       'lib/nodeunit.js',
       'src/*.js',
